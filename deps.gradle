@@ -1,0 +1,89 @@
+ext.deps = [:]
+
+ext.versions = [:]
+def versions = [:]
+
+//sdk versions
+versions.compile_sdk = 27
+versions.min_sdk = 16
+versions.target_sdk = 23
+versions.build_tools = '27.0.3'
+
+
+versions.auto_value = '1.6'
+versions.auto_value_gson = '0.7.0'
+versions.auto_value_parcel = '0.2.5'
+versions.constraint_layout = '1.1.0'
+versions.lifecycle = '1.1.0'
+versions.support_lib = '27.1.1'
+versions.okhttp_integration = '4.3.1@aar'
+versions.okhttp = '3.9.0'
+versions.gson = '2.8.2'
+versions.retrofit = '2.2.0'
+versions.rxjava = '2.1.10'
+versions.rxandroid = '2.0.2'
+versions.chuck = '1.1.0'
+
+ext.versions = versions
+
+def deps = [:]
+
+def okhttp = [:]
+okhttp.main = "com.squareup.okhttp3:okhttp:$versions.okhttp"
+okhttp.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+deps.okhttp = okhttp
+
+deps.okhttp_urlconnection = "com.squareup.okhttp:okhttp-urlconnection:$versions.okhttp_urlconnection"
+
+
+def retrofit = [:]
+retrofit.main = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.rxjava = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+retrofit.xml = "com.squareup.retrofit2:converter-simplexml:$versions.retrofit"
+deps.retrofit = retrofit
+
+def rxjava = [:]
+rxjava.main = "io.reactivex.rxjava2:rxjava:$versions.rxjava"
+rxjava.android = "io.reactivex.rxjava2:rxandroid:$versions.rxandroid"
+deps.rxjava = rxjava
+
+
+def chuck = [:]
+chuck.library = "com.readystatesoftware.chuck:library:$versions.chuck"
+chuck.library_no_op = "com.readystatesoftware.chuck:library-no-op:$versions.chuck"
+deps.chuck = chuck
+
+
+def auto_value = [:]
+auto_value.annotations = "com.google.auto.value:auto-value-annotations:$versions.auto_value"
+auto_value.compiler = "com.google.auto.value:auto-value:$versions.auto_value"
+deps.auto_value = auto_value
+
+def auto_value_gson = [:]
+auto_value_gson.compiler = "com.ryanharter.auto.value:auto-value-gson:$versions.auto_value_gson"
+auto_value_gson.annotations = "com.ryanharter.auto.value:auto-value-gson-annotations:$versions.auto_value_gson"
+deps.auto_value_gson = auto_value_gson
+
+deps.auto_value_parcel = "com.ryanharter.auto.value:auto-value-parcel:$versions.auto_value_parcel"
+
+deps.gson = "com.google.code.gson:gson:$versions.gson"
+deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
+
+
+def lifecycle = [:]
+lifecycle.extensions = "android.arch.lifecycle:extensions:$versions.lifecycle"
+lifecycle.reactivestreams = "android.arch.lifecycle:reactivestreams:$versions.lifecycle"
+lifecycle.compiler = "android.arch.lifecycle:common-java8:$versions.lifecycle"
+deps.lifecycle = lifecycle
+
+
+def support_lib = [:]
+support_lib.design = "com.android.support:design:$versions.support_lib"
+support_lib.appcompat = "com.android.support:appcompat-v7:$versions.support_lib"
+support_lib.support_v4 = "com.android.support:support-v4:$versions.support_lib"
+support_lib.recyclerview = "com.android.support:recyclerview-v7:$versions.support_lib"
+support_lib.cardview = "com.android.support:cardview-v7:$versions.support_lib"
+deps.support_lib = support_lib
+
+ext.deps = deps

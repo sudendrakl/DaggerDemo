@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="variation"
+            type="jsonexclusion.test.in.jsonexclusion.model.Variations" />
+
+        <variable
+            name="groupId"
+            type="String" />
+
+        <variable
+            name="observer"
+            type="io.reactivex.subjects.PublishSubject" />
+
+        <variable
+            name="disabled"
+            type="boolean" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.util.Pair" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@{disabled ? @android:color/darker_gray: @android:color/white}"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/name"
+            style="?android:textAppearanceListItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{variation.name + "("+variation.id+")" }'
+            tools:text="Thin" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:text='@{ "Price : " + variation.price}' />
+
+        <TextView
+            android:id="@+id/veg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price"
+            android:text='@{ TextUtils.equals(variation.isVeg, "1") ? "veg" : "non-veg"}' />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg"
+            android:onCheckedChanged="@{(v,b) -> observer.onNext(Pair.create(variation.id, b))}"
+            android:text='@{"Qty : " + variation.inStock}' />
+    </RelativeLayout>
+</layout>

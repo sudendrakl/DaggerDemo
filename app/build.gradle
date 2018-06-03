@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
+
+    defaultConfig {
+        applicationId "jsonexclusion.test.in.jsonexclusion"
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support_lib.design
+    implementation deps.support_lib.appcompat
+    implementation deps.support_lib.support_v4
+    implementation deps.support_lib.recyclerview
+    implementation deps.support_lib.cardview
+
+    api deps.constraint_layout
+
+    //Auto value
+    implementation deps.auto_value.annotations
+    annotationProcessor deps.auto_value.compiler
+    implementation deps.auto_value_gson.annotations
+    // included again as annotation processor because of
+    // an issue https://github.com/rharter/auto-value-gson/issues/171
+    annotationProcessor deps.auto_value.annotations
+    annotationProcessor deps.auto_value_gson.compiler
+    annotationProcessor deps.auto_value_parcel
+
+    // Viewmodel
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.reactivestreams
+    annotationProcessor deps.lifecycle.compiler
+
+
+    implementation deps.okhttp.main
+    implementation deps.okhttp.logging_interceptor
+
+    implementation deps.gson
+
+    implementation deps.rxjava.main
+    implementation deps.rxjava.android
+    implementation deps.retrofit.main
+    implementation deps.retrofit.rxjava
+    implementation deps.retrofit.gson
+    implementation(deps.retrofit.xml) {
+        exclude module: 'stax'
+        exclude module: 'stax-api'
+        exclude module: 'xpp3'
+    }
+
+    debugImplementation deps.chuck.library
+
+}
