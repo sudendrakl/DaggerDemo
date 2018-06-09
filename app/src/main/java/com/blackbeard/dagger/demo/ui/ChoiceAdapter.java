@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion.ui;
+package com.blackbeard.dagger.demo.ui;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -14,8 +14,8 @@ import java.util.Map;
 
 import io.reactivex.subjects.PublishSubject;
 import jsonexclusion.test.in.jsonexclusion.databinding.ChoiceItemBinding;
-import jsonexclusion.test.in.jsonexclusion.model.VariantGroups;
-import jsonexclusion.test.in.jsonexclusion.model.Variations;
+import com.blackbeard.dagger.demo.model.VariantGroups;
+import com.blackbeard.dagger.demo.model.Variations;
 
 /**
  * Created by sudendra on 2/6/18.

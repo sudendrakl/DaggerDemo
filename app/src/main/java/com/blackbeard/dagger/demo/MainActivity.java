@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion;
+package com.blackbeard.dagger.demo;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 
-import jsonexclusion.test.in.jsonexclusion.ViewModel.MainVM;
+import com.blackbeard.dagger.demo.ViewModel.MainVM;
 import jsonexclusion.test.in.jsonexclusion.databinding.ActivityMainBinding;
-import jsonexclusion.test.in.jsonexclusion.model.Variants;
-import jsonexclusion.test.in.jsonexclusion.ui.MainAdapter;
+import com.blackbeard.dagger.demo.model.Variants;
+import com.blackbeard.dagger.demo.ui.MainAdapter;
 
 public class MainActivity extends AppCompatActivity {
 

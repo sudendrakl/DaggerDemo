@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion.service;
+package com.blackbeard.dagger.demo.service;
 
 import com.google.gson.TypeAdapterFactory;
 import com.ryanharter.auto.value.gson.GsonTypeAdapterFactory;

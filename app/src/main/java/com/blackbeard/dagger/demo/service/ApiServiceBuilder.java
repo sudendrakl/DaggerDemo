@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion.service;
+package com.blackbeard.dagger.demo.service;
 
 import android.content.Context;
 

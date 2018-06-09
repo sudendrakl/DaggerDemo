@@ -6,7 +6,7 @@
 
         <variable
             name="variation"
-            type="jsonexclusion.test.in.jsonexclusion.model.Variations" />
+            type="com.blackbeard.dagger.demo.model.Variations" />
 
         <variable
             name="groupId"

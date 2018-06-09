@@ -1,7 +1,7 @@
-package jsonexclusion.test.in.jsonexclusion.service;
+package com.blackbeard.dagger.demo.service;
 
 import io.reactivex.Single;
-import jsonexclusion.test.in.jsonexclusion.model.ResponseWrapper;
+import com.blackbeard.dagger.demo.model.ResponseWrapper;
 import retrofit2.http.GET;
 
 /**

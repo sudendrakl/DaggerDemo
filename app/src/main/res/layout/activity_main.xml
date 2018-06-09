@@ -20,7 +20,6 @@
             android:id="@+id/variants"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="jsonexclusion.test.in.jsonexclusion.MainActivity"
             android:orientation="vertical"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
             tools:listItem="@layout/list_item" />

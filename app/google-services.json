@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "679178977146",
+    "firebase_url": "https://dagger-demo-21cc4.firebaseio.com",
+    "project_id": "dagger-demo-21cc4",
+    "storage_bucket": "dagger-demo-21cc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679178977146:android:ee34cb431aaf8dd9",
+        "android_client_info": {
+          "package_name": "com.blackbeard.dagger.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679178977146-fmahinjf7que8icmmfdpjqssr7is2hlb.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "679178977146-fmahinjf7que8icmmfdpjqssr7is2hlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCig_BeBQGgorA8BceMthwfTUF0s3iwtTA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

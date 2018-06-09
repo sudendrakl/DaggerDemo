@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion.model;
+package com.blackbeard.dagger.demo.model;
 
 import android.support.annotation.Nullable;
 

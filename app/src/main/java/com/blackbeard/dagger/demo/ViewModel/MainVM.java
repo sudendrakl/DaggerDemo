@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion.ViewModel;
+package com.blackbeard.dagger.demo.ViewModel;
 
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
@@ -13,10 +13,10 @@ import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.PublishSubject;
-import jsonexclusion.test.in.jsonexclusion.model.ExcludeItem;
-import jsonexclusion.test.in.jsonexclusion.model.ResponseWrapper;
-import jsonexclusion.test.in.jsonexclusion.model.Variants;
-import jsonexclusion.test.in.jsonexclusion.service.ApiServiceBuilder;
+import com.blackbeard.dagger.demo.model.ExcludeItem;
+import com.blackbeard.dagger.demo.model.ResponseWrapper;
+import com.blackbeard.dagger.demo.model.Variants;
+import com.blackbeard.dagger.demo.service.ApiServiceBuilder;
 
 /**
  * Created by sudendra on 2/6/18.

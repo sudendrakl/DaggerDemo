@@ -1,4 +1,4 @@
-package jsonexclusion.test.in.jsonexclusion.model;
+package com.blackbeard.dagger.demo.model;
 
 import com.google.auto.value.AutoValue;
 import com.google.gson.Gson;

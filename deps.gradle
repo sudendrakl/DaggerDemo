@@ -13,16 +13,19 @@ versions.build_tools = '27.0.3'
 versions.auto_value = '1.6'
 versions.auto_value_gson = '0.7.0'
 versions.auto_value_parcel = '0.2.5'
+versions.chuck = '1.1.0'
 versions.constraint_layout = '1.1.0'
+versions.firebase = '16.0.0'
+versions.google_services = '4.0.1'
+versions.gradle_plugin = '3.0.1'
+versions.gson = '2.8.2'
 versions.lifecycle = '1.1.0'
-versions.support_lib = '27.1.1'
 versions.okhttp_integration = '4.3.1@aar'
 versions.okhttp = '3.9.0'
-versions.gson = '2.8.2'
 versions.retrofit = '2.2.0'
 versions.rxjava = '2.1.10'
 versions.rxandroid = '2.0.2'
-versions.chuck = '1.1.0'
+versions.support_lib = '27.1.1'
 
 ext.versions = versions
 
@@ -48,12 +51,10 @@ rxjava.main = "io.reactivex.rxjava2:rxjava:$versions.rxjava"
 rxjava.android = "io.reactivex.rxjava2:rxandroid:$versions.rxandroid"
 deps.rxjava = rxjava
 
-
 def chuck = [:]
 chuck.library = "com.readystatesoftware.chuck:library:$versions.chuck"
 chuck.library_no_op = "com.readystatesoftware.chuck:library-no-op:$versions.chuck"
 deps.chuck = chuck
-
 
 def auto_value = [:]
 auto_value.annotations = "com.google.auto.value:auto-value-annotations:$versions.auto_value"
@@ -85,5 +86,15 @@ support_lib.support_v4 = "com.android.support:support-v4:$versions.support_lib"
 support_lib.recyclerview = "com.android.support:recyclerview-v7:$versions.support_lib"
 support_lib.cardview = "com.android.support:cardview-v7:$versions.support_lib"
 deps.support_lib = support_lib
+
+def services = [:]
+services.google = "com.google.gms:google-services:$versions.google_services"
+services.gradle_plugin = "com.android.tools.build:gradle:$versions.gradle_plugin"
+services.google_plugin = "com.google.gms.google-services"
+deps.services = services
+
+def firebase = [:]
+firebase.core = "com.google.firebase:firebase-core:$versions.firebase"
+deps.firebase = firebase
 
 ext.deps = deps
